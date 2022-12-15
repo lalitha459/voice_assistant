@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee+Spice&family=DynaPuff:wght@400;700&family=IBM+Plex+Sans:wght@100&family=Source+Sans+Pro:wght@700&family=Titillium+Web:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+.main {
+  margin: 0;
+  position: relative;
+  background-image: linear-gradient(#000000e0, rgb(0 0 0 / 60%)), url('../images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main .image-container {
+  padding: 10px;
+}
+
+.main .image-container .image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main .image-container .image img {
+  width: 170px;
+  align-items: center;
+}
+
+
+
+.main1 {
+  position: relative;
+
+  text-align: center;
+
+  top: 20%;
+}
+
+
+.head {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+
+
+}
+
+.lang {
+
+  display: inline;
+  margin: 1rem;
+
+
+
+}
+
+.but {
+  padding: 10px 20px;
+  margin: 1rem;
+  border-radius: 20px;
+  background-color: #b1e802;
+  font-weight: 600;
+  width: auto;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  position: relative;
+  margin: 3rem;
+}
+
+.but:hover {
+  background-color: white;
+  transition-duration: 0.1s;
+}
+
+.but:hover {
+  transition-duration: 0.1s;
+  background-color: #b1e802;
+}
+
+.but:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.9s;
+  box-shadow: 0 0px 10px 30px #b1e802;
+}
+
+.but:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.but:active {
+  top: 2px;
+  left: 2px;
+}
+
+.gender {
+
+  text-align: center;
+
+  width: 30%;
+  height: auto;
+
+  position: relative;
+  left: 35%;
+
+
+}
+
+.head1 {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  font-size: 18px;
+
+
+}
+
+.gen-but {
+  display: flex;
+
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+
+}
+
+.gen-but1 {
+
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #b1e802;
+
+
+
+}
+
+.img1 {
+  width: 99%;
+  height: 170px;
+}
+
+
+.img2 {
+  width: 96%;
+  height: 190px;
+}
+
+
+
+/* ///////////////////////////////////////////mic css////////////////// */
+
+#mic {
+  display: inline-block;
+  margin: 50px 0;
+  font-size: 80px;
+  line-height: 170px;
+  height: 180px;
+  width: 180px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+#mic.fa-microphone {
+  border: 5px solid #eb0b0b;
+  color: #e50c0c;
+}
+
+#mic.fa-microphone:hover {
+  color: #9fea63;
+  border-color: #9fea63;
+}
+
+#mic.fa-microphone-slash {
+  border: 5px solid #f00;
+  color: #f00;
+}
+
+#mic.fa-microphone-slash:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+#text {
+  display: block;
+  height: 50px;
+  width: 500px;
+  font-size: 25px;
+  padding: 15px;
+  border: 2px solid #3ba9f4;
+  background-color: transparent;
+  color: #fbfdf9;
+  border-radius: 25px;
+}
+
+.lang_buttons {
+  display: flex;
+  align-items: center;
+  flex: auto;
+
+}

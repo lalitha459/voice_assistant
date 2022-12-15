@@ -1,0 +1,736 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="title icon" href="{% static 'images/logo.png'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Bungee+Spice&family=DynaPuff:wght@400;700&family=IBM+Plex+Sans:wght@100&family=Source+Sans+Pro:wght@700&family=Titillium+Web:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
+        rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- <script src="script.js"></script> -->
+</head>
+<title>
+    Voice Assistant
+</title>
+<body>
+
+
+    <section class="sec1">
+
+        <div class="main">
+
+
+            <div class="main1">
+                <h1 class="head"> Choose language</h1>
+
+                <div class="lang buttons">
+                    <button class="but">తెలుగు</button>
+                    <button class="but">ENGLISH </button>
+                    <button class="but">मराठी</button>
+                    <button class="but">हिंदी</button>
+                    <button class="but"> தமிழ்</button>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+            <div class="main1">
+
+                <div class="gender" id="myDIV">
+                    <div class="head1">SELECT YOUR VOICE</div>
+
+                    <div class="gen-but">
+
+                        <a href="{% url 'search'%}" target="_self"> <img src="{% static './images/men.png'%}" class="img1">
+                        </a>
+
+                        <a href="{% url 'search'%}" target="_self"> <img src="{% static './images/female.png' %}"
+                                class="img2"></a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <script>
+
+        window.onload = function () {
+            document.getElementById('myDIV').style.display = 'none';
+        };
+
+        var buttons = document.querySelectorAll('.buttons button');
+
+
+
+        var text = document.querySelector('.text');
+
+        buttons[1].style.display = 'inline-block';
+        buttons[2].style.display = 'inline-block';
+        buttons[3].style.display = 'inline-block';
+        buttons[4].style.display = 'inline-block';
+
+
+
+
+
+        buttons.forEach(button => {
+
+            button.addEventListener('click', () => {
+
+                // text.textContent = "You Pressed" + button.textContent;
+
+                switch (button) {
+
+                    // case with edit button
+                    case buttons[0]:
+
+                        buttons[0].style.display = 'inline-block';
+                        buttons[1].style.display = 'none';
+                        buttons[2].style.display = 'none';
+                        buttons[3].style.display = 'none';
+                        buttons[4].style.display = 'none';
+                        (function () {
+                            var x = document.getElementById("myDIV");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                // x.style.display = "none";
+                            }
+                        })();
+
+                        break;
+
+                    // case with back button
+                    case buttons[1]:
+
+                        buttons[0].style.display = 'none';
+                        buttons[1].style.display = 'inline-block';
+                        buttons[2].style.display = 'none';
+                        buttons[3].style.display = 'none';
+                        buttons[4].style.display = 'none';
+                        (function () {
+                            var x = document.getElementById("myDIV");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                // x.style.display = "none";
+                            }
+                        })();
+
+                        break;
+
+                    case buttons[2]:
+
+                        buttons[0].style.display = 'none';
+                        buttons[1].style.display = 'none';
+                        buttons[2].style.display = 'inline-block';
+                        buttons[3].style.display = 'none';
+                        buttons[4].style.display = 'none';
+
+                        (function () {
+                            var x = document.getElementById("myDIV");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                // x.style.display = "none";
+                            }
+                        })();
+
+                        break;
+
+
+                        case buttons[3]:
+
+                        buttons[0].style.display = 'none';
+                        buttons[1].style.display = 'none';
+                        buttons[2].style.display = 'none';
+                        buttons[3].style.display = 'inline-block';
+                        buttons[4].style.display = 'none';
+
+                        (function () {
+                            var x = document.getElementById("myDIV");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                // x.style.display = "none";
+                            }
+                        })();
+
+                        break;
+                        case buttons[4]:
+
+                        buttons[0].style.display = 'none';
+                        buttons[1].style.display = 'none';
+                        buttons[2].style.display = 'none';
+                        buttons[3].style.display = 'none';
+                        buttons[4].style.display = 'inline-block';
+
+                        (function () {
+                            var x = document.getElementById("myDIV");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                // x.style.display = "none";
+                            }
+                        })();
+
+                        break;
+                        
+                    //  default optional
+                    default:
+                        console.log("nothing to do!!");
+                        break;
+
+                }
+
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
+</body>
+
+</html>
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee+Spice&family=DynaPuff:wght@400;700&family=IBM+Plex+Sans:wght@100&family=Source+Sans+Pro:wght@700&family=Titillium+Web:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+.main {
+  margin: 0;
+  position: relative;
+  background-image: linear-gradient(#000000e0, rgb(0 0 0 / 60%)), url('./static/images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+.main1 {
+  position: relative;
+ 
+  text-align: center;
+
+top: 20%;
+}
+
+.head {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+ 
+ 
+}
+
+.lang {
+ 
+  display: inline;
+  margin: 1rem;
+ 
+  
+
+}
+
+.but {
+  padding: 10px 20px;
+  margin: 1rem;
+  border-radius: 20px;
+  background-color: #b1e802;
+  font-weight: 600;
+  width: auto;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  position: relative;
+  margin: 3rem;
+}
+
+.but:hover {
+  background-color: white;
+  transition-duration: 0.1s;
+}
+
+.but:hover {
+  transition-duration: 0.1s;
+  background-color: #b1e802;
+}
+
+.but:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.9s;
+  box-shadow: 0 0px 10px 30px #b1e802;
+}
+
+.but:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.but:active {
+  top:2px;
+  left: 2px;
+}
+
+.gender {
+
+  text-align: center;
+ 
+  width: 30%;
+  height: auto;
+
+  position: relative;
+  left: 35%;
+
+
+}
+
+.head1 {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  font-size: 18px;
+
+
+}
+
+.gen-but {
+  display: flex;
+
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+
+}
+
+.gen-but1 {
+
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #b1e802;
+
+
+
+}
+.img1{
+  width: 99%;
+  height: 170px;
+}
+  
+
+.img2{
+  width: 96%;
+  height: 190px;
+}
+
+
+/* ///////////////////////////////////////// voice_search css////////////////////////////////////////////// */
+
+
+.mic-icon::before {
+  color: white;
+  position: relative;
+  left: -1px;
+  top: 13px;
+  font-size: 23px;
+}
+
+.wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 48%;
+  left: 43%;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%) */
+  transform: scale(2.0);
+}
+
+.record-main {
+  position: relative;
+  display: inline-block;
+}
+
+.record {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: transparent;
+  color: #fff;
+  display: inline-block;
+  background: #cb1414;
+  z-index: 999;
+}
+
+@keyframes waves {
+  0% {
+      -webkit-transform: scale(0.2, 0.2);
+      transform: scale(0.2, 0.2);
+      opacity: 0;
+      
+  }
+
+  50% {
+      opacity: 0.9;
+
+  }
+
+  100% {
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9);
+      opacity: 0;
+
+  }
+}
+
+/* .fa-play:before {
+  content: "\f04b";
+} */
+
+.waves {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgb(230 226 226 / 30%);
+  opacity: 0;
+  border-radius: 100%;
+  right: -50px;
+  bottom: -50px;
+  z-index: -1;
+  -webkit-animation: waves 3s ease-in-out infinite;
+  animation: waves 3s ease-in-out infinite;
+}
+
+.wave-1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.wave-3 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.record_animi{
+  position: relative;
+  top: 113px;
+  left: -6px;
+}
+
+.talk_master_div{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+/* ///////////////////////////////////////// voice_search css////////////////////////////////////////////// */
+.mic-icon::before {
+  color: white;
+  position: relative;
+  left: -1px;
+  top: 13px;
+  font-size: 23px;
+}
+
+.wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 48%;
+  left: 43%;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%) */
+  transform: scale(2.0);
+}
+
+.record-main {
+  position: relative;
+  display: inline-block;
+}
+
+.record {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: transparent;
+  color: #fff;
+  display: inline-block;
+  background: #cb1414;
+  z-index: 999;
+}
+
+@keyframes waves {
+  0% {
+      -webkit-transform: scale(0.2, 0.2);
+      transform: scale(0.2, 0.2);
+      opacity: 0;
+      
+  }
+
+  50% {
+      opacity: 0.9;
+
+  }
+
+  100% {
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9);
+      opacity: 0;
+
+  }
+}
+
+/* .fa-play:before {
+  content: "\f04b";
+} */
+
+.waves {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgb(230 226 226 / 30%);
+  opacity: 0;
+  border-radius: 100%;
+  right: -50px;
+  bottom: -50px;
+  z-index: -1;
+  -webkit-animation: waves 3s ease-in-out infinite;
+  animation: waves 3s ease-in-out infinite;
+}
+
+.wave-1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.wave-3 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.record_animi{
+  position: relative;
+  top: 113px;
+  left: -6px;
+}
+
+.talk_master_div{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+///////////////////////////////////////////////////////javascript code/////////////////////////////////////////////////
+
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" </script>
+    <script>"https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.map"</script>
+
+
+<!-- <div class="col-md-12" style="width: 300px;
+                    height: 300px;">
+                        
+
+
+                        <div class="record_animi">
+                     
+                            
+                      
+                            <div class="wrapper">
+                                <div class="record-main">
+                                    <div class="promo-record">
+                                        <div class="waves-block">
+                                            <div class="waves wave-1"></div>
+                                            <div class="waves wave-2"></div>
+                                            <div class="waves wave-3"></div>
+                                        </div>
+                                    </div>
+                                    <i class="fa-solid fa-microphone mic-icon record record-popup"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+                    <!-- </div>
+            </div> -->
+
+
+             <script>
+        
+    </script>
+
+
+<!-- <script>
+    
+
+$(".inputTxt").bind("keypress keyup keydown", function (event) {
+    var evtType = event.type;
+    var eWhich = event.which;
+    var echarCode = event.charCode;
+    var ekeyCode = event.keyCode;
+
+    switch (evtType) {
+        case 'keypress':
+            $("#log").html($("#log").html() + "<b>" + evtType + "</b>" + " keycode: " + ekeyCode + " charcode: " + echarCode + " which: " + eWhich + "<br>");
+            alert('hello')
+            break;
+        case 'keyup':
+            $("#log").html($("#log").html() + "<b>" + evtType + "</b>" + " keycode: " + ekeyCode + " charcode: " + echarCode + " which: " + eWhich + "<p>");
+            alert('bye')
+            break;
+        case 'keydown':
+            $("#log").html($("#log").html() + "<b>" + evtType + "</b>" + " keycode: " + ekeyCode + " charcode: " + echarCode + " which: " + eWhich + "<br>");
+            break;
+        default:
+            break;
+    }
+});
+</script> -->
+
+
+
+<script>
+    document.getElementByClassName("inputTxt").bind("keypress keyup keydown", function (event) {
+    let evtType = event.type;
+    let eWhich = event.which;
+    let echarCode = event.charCode;
+    let ekeyCode = event.keyCode;
+
+    switch (evtType) {
+        case 'keypress':
+            document.getElementById("log").innerHTML = document.getElementById("log".innerHTML + "<b>" + evtType + "</b>" + " keycode: " + ekeyCode + " charcode: " + echarCode + " which: " + eWhich + "<br>");
+            break;
+        case 'keyup':
+            document.getElementById("log").innerHTML = document.getElementById("log".innerHTML + "<b>" + evtType + "</b>" + " keycode: " + ekeyCode + " charcode: " + echarCode + " which: " + eWhich + "<p>");
+            break;
+        case 'keydown':
+            document.getElementById("log").innerHTML = document.getElementById("log".innerHTML + "<b>" + evtType + "</b>" + " keycode: " + ekeyCode + " charcode: " + echarCode + " which: " + eWhich + "<br>");
+            break;
+        default:
+            break;
+    }
+});
+</script>
+
+
+<script>
+    const input = document.getElementById("input");
+
+input.addEventListener("keyup", evt => {  
+  console.log("up")
+});
+
+input.addEventListener("keydown", evt => {
+  console.log("down")
+});
+</script>
+
+
+<script>
+    $(document).ready(function () {
+
+    $("#txtInput").keypress(
+        function (event) {
+
+            if (event.which == 64) {
+                alert("You have pressed @ sign");
+            }
+            else if (event.which == 35) {
+                alert("You have pressed # sign");
+            }
+            else if (event.which == 36) {
+                alert("You have pressed $ sign");
+            }
+            else if (event.which == 42) {
+                alert("You have pressed * sign");
+            }
+            else if (event.which >= 65 && event.which <= 90) {
+                alert("You have pressed uppercase alphabet character");
+            }
+            else if (event.which >= 97 && event.which <= 122) {
+                alert("You have pressed lowercase alphabet character");
+            }
+
+        }
+    );
+
+    });
+</script>
+
+
+ <input class="inputTxt" type="text" id="text" placeholder="Say something to the mic..." readonly />
+                <input id="input" type="text" />
+                <input id="txtInput" type="text" />
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

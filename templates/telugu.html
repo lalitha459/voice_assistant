@@ -1,0 +1,37 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="title icon" href="{% static 'images/logo.png'%}">
+    <link rel="stylesheet" href="{% static './css/new.css' %}">
+
+    <title>Voice Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <section class="main">
+        <div class="image-container">
+            <div class="image">
+                <img src="{% static './images/roundgif.gif'%}" alt="image">
+            </div>
+            <h1>టిల్లర్</h1>
+            <p>నేను మీ వాయిస్ అసిస్టెంట్. నేను మీకు ఎలా సహాయం చేయగలను?</p>
+        </div>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content">Click here to speak</h1>
+        </div>
+    </section>
+    <!----js linkage-->
+    <script src="{% static './css/text.js'%}"></script>
+</body>
+
+
+</html>

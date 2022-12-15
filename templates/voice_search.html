@@ -1,0 +1,109 @@
+{%load static%}
+<title>
+    Voice Assistant
+</title>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="title icon" href="{% static 'images/logo.png'%}">
+
+
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Bungee+Spice&family=DynaPuff:wght@400;700&family=IBM+Plex+Sans:wght@100&family=Source+Sans+Pro:wght@700&family=Titillium+Web:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
+        rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="gender_select" class="gen_select_sec">
+        <div class="container-fluid voice_back talk_master_div main">
+            <!-- <div class="col-md-12">
+                <div class="row"> -->
+            <div style="    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;">
+                <!-- <h1 class="head">Start Talking</h1> -->
+
+
+                <h1 class="head">Speech Recognition</h1>
+                <i class="fas fa-microphone" id="mic"></i>
+                <input class="inputTxt" type="text" id="text" placeholder="Say something to the mic..." readonly />
+
+
+
+
+
+                
+            </div>
+            
+        </div>
+    </section>
+
+
+   
+    <script>
+        let isRecording = false;
+let recognition;
+
+window.onload = () => {
+  window.SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SpeechRecognition();
+  recognition.continuous = true;
+  document.getElementById("mic").addEventListener("click", onClickMic);
+  recognition.onresult = onSpeech;
+
+};
+
+
+function onClickMic(event) {
+  event.target.classList.toggle("fa-microphone");
+  event.target.classList.toggle("fa-microphone-slash");
+
+  if (isRecording) 
+  {
+    recognition.stop();
+    
+  } 
+  else 
+  {
+    recognition.start();
+  }
+
+  isRecording = !isRecording;
+}
+
+function onSpeech(event) {
+  const lastElIndex = event.results.length - 1;
+  const text = event.results[lastElIndex][0].transcript;
+  
+  document.getElementById("text").value = text;
+  
+}
+
+    </script>
+<script src="english.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
