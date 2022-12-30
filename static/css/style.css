@@ -48,8 +48,7 @@
   position: relative;
 
   text-align: center;
-
-  top: 20%;
+padding-top:42px;
 }
 
 
@@ -229,6 +228,6 @@
 .lang_buttons {
   display: flex;
   align-items: center;
-  flex: auto;
+  flex-direction: column;
 
 }
