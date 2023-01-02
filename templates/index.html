@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="title icon" href="{% static 'images/logo.png'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>
+        Voice Assistant
+    </title>
     <!-- <link
         href="https://fonts.googleapis.com/css2?family=Arvo&family=Bungee+Spice&family=DynaPuff:wght@400;700&family=IBM+Plex+Sans:wght@100&family=Source+Sans+Pro:wght@700&family=Titillium+Web:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
         rel="stylesheet"> -->
@@ -22,41 +25,48 @@
 
     <!-- <script src="script.js"></script> -->
 </head>
-<title>
-    Voice Assistant
-</title>
+
 
 <body>
-
+    <div class="nav-bar">
+        <div class="image">
+            <button class="btn-image"> <img src="https://img.freepik.com/premium-vector/voice-recognition-ai-personal-assistant-modern-technology-visual-concept-microphone-button-icon-digital-sound-wave-audio_268834-100.jpg?w=2000;"
+                    style="width:60px;height:60px;border-radius: 30px;"></button>
+        </div>
+        <div class="voice">
+        <button class="btn">
+           <div class="voice" >   VOICE ASSISTANT  </div>
+           
+        </button>
+        </div>
+    </div>
 
     <section class="sec1">
-
         <div class="main">
-
-
             <div class="main1">
                 <h1 class="head"> Choose language</h1>
+                <!-- <div class="col-md-12  col-12 lang_buttons"> -->
+                    <div class="lang_buttons">
+                        <div>
+                            <a href="{% url 'telugu' %}"><button class="but">తెలుగు</button></a>
+                        </div>
+                        <div>
+                            <a href="{% url 'english' %}"><button class="but">ENGLISH </button></a>
+                        </div>
+                        <div>
 
-                <div class="lang_buttons">
-                    <a href="{% url 'telugu' %}"><button class="but">తెలుగు</button></a>
-                    <a href="{% url 'english' %}"><button class="but">ENGLISH </button></a>
-                    <a href="{% url 'marathi' %}"><button class="but">मराठी</button></a>
-                    <a href="{% url 'hindi' %}"><button class="but">हिंदी</button></a>
-                    <a href="{% url 'tamil' %}"><button class="but"> தமிழ்</button></a>
-
-                </div>
-
-
-
+                            <a href="{% url 'marathi' %}"><button class="but">मराठी</button></a>
+                        </div>
+                        <div>
+                            <a href="{% url 'hindi' %}"><button class="but">हिंदी</button></a>
+                        </div>
+                        <div>
+                            <a href="{% url 'tamil' %}"><button class="but"> தமிழ்</button></a>
+                        </div>
+                    </div>
+                <!-- </div> -->
             </div>
-
-
-
-
-            
         </div>
-
-
     </section>
 
 
@@ -66,7 +76,7 @@
 
 
 
-<!-- <div class="main1">
+    <!-- <div class="main1">
 
                 <div class="gender" id="myDIV">
                     <div class="head1">SELECT YOUR VOICE</div>
@@ -86,7 +96,7 @@
 
 
             </div> -->
-   
+
 
     <!-- <script>
 
@@ -126,7 +136,7 @@
 
 
 
-<!-- 
+    <!-- 
     <script>
 
         window.onload = function () {

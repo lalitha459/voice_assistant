@@ -1,6 +1,7 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +11,148 @@
 
     <title>Voice Assistant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/meyda@5.0.8/dist/web/meyda.min.js"></script>
 
 </head>
+
 <body>
     <section class="main">
         <div class="image-container">
             <div class="image">
+                <!-- <canvas id="output"></canvas> -->
                 <img src="{% static './images/roundgif.gif'%}" alt="image">
             </div>
             <h1>TILLER</h1>
             <p>I am your voice assistant.How can i help you?</p>
         </div>
         <div class="input">
-            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
-            <h1 class="content">Click here to speak</h1>
+            <button class="talk"><i class="fas fa-microphone-alt"></i><h1 class="content">Click here to speak</h1></button>
+            <!-- <h1 class="content">Click here to speak</h1> -->
         </div>
     </section>
     <!----js linkage-->
     <script src="{% static './css/english.js'%}"></script>
+
+
+
+<!-- <script>
+    /**
+ * Circle Waveform / Audio Reactive (Microphone)
+ * 
+ * 
+ * 2020 by Tim Pietrusky
+ *
+ * https://nerddis.co
+ */
+
+const canvas = document.getElementById("output");
+canvas.width = 400;
+canvas.height = 400;
+const ctx = canvas.getContext("2d");
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+let raf
+let audioContext
+if (raf) {
+  cancelAnimationFrame(raf)
+}
+
+const numberOfSides = 512
+const size = 100
+const x = canvas.width / 2
+const y = canvas.height / 2
+const lineWidth = 15
+const lineColor = '#fff'
+const audioAmplifier = 100
+
+
+/*
+ * Draw the Circle Waveform based on the audio buffer from meyda
+ */
+function draw(buffer) {
+  
+  if (buffer === undefined || buffer === null) {
+    ctx.arc(x, y, size, 0, 2 * Math.PI);
+    ctx.strokeStyle = lineColor
+    ctx.lineWidth = lineWidth
+    ctx.stroke()
+    
+    return
+  }
+
+  ctx.beginPath();
+
+  // Create audio-reactive polygons
+  for (var i = 0; i < numberOfSides; i++) {
+    
+    const audioValue = buffer[i] * audioAmplifier
+    const cos = Math.cos(i * 2 * Math.PI / numberOfSides)
+    const sin = Math.sin(i * 2 * Math.PI / numberOfSides)
+    const x1 = x + size * cos - audioValue // * (i % 2 === 1 ? -1: 1)
+    const y1 = y + size * sin + (i % 2 === 1 ? audioValue : 0)
+    
+    if (i === 0) {
+      ctx.moveTo(x1, y1);
+    } else {
+      ctx.lineTo(x1, y1);
+    }
+  }
+
+  ctx.closePath()
+  ctx.strokeStyle = lineColor
+  ctx.lineWidth = lineWidth
+  ctx.stroke()
+}
+
+
+
+
+/**
+ * - Get the mic input
+ * - Setup audioContext to use with Meyda
+ * - Create a rAF loop that calls draw()
+ */
+(async function() {
+  let stream = null
+
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false
+      }
+    });
+  } catch (err) {
+    throw new Error(err)
+  }
+
+  if (audioContext) audioContext.close();
+  audioContext = new AudioContext({
+    latencyHint: "interactive"
+  });
+
+  const source = audioContext.createMediaStreamSource(stream);
+
+  const meyda = new Meyda.createMeydaAnalyzer({
+    audioContext,
+    source,
+    bufferSize: numberOfSides,
+    windowingFunction: "rect"
+  });
+  
+  loop = delta => {
+    raf = requestAnimationFrame(loop)
+    
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const buffer = meyda.get('buffer')
+    draw(buffer)
+  };
+  
+  raf = requestAnimationFrame(loop)
+})();
+</script> -->
+
+
 </body>
 
 
