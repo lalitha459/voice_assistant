@@ -50,13 +50,13 @@ function speakThis(message){
 
     speech.text="I didn't understand what you said please try again or pleasee check your mic";
 
-    if(message.includes('hey') || message.includes('hello')){
+    if(message.includes('hai') || message.includes('hello')){
         const finalText="Hello Boss , have a nice day ";
         speech.text=finalText;
 
     }
     else if(message.includes('how are you')){
-        const finalText="thank you for asking about me.I am super fine ";
+        const finalText="thank you for asking about me.I am super fine and how are you ?";
         speech.text=finalText;
     }
     else if(message.includes('what is your name')){

@@ -29,9 +29,18 @@
 
 <body>
     <div class="nav-bar">
+    <nav class="navbar">
+        <div class="container-fluid"><a class="brand" href="{% url 'home' %}"><img class="brand-logo-light"
+              src="{% static './images/sitelogo.png' %}"  style="width:50px;height:50px;"
+              srcset="{% static './images/sitelogo.png' %}"></a>
+        </div>
+        <div class="voice-assistant">VOICE ASSISTANT</div>
+    </nav>
+    </div>
+
+    <!-- <div class="nav-bar">
         <div class="image">
-            <button class="btn-image"> <img src="https://img.freepik.com/premium-vector/voice-recognition-ai-personal-assistant-modern-technology-visual-concept-microphone-button-icon-digital-sound-wave-audio_268834-100.jpg?w=2000;"
-                    style="width:60px;height:60px;border-radius: 30px;"></button>
+            <a class="btn-image"> <img src="{% static './images/sitelogo.png' %}"></a>
         </div>
         <div class="voice">
         <button class="btn">
@@ -39,7 +48,7 @@
            
         </button>
         </div>
-    </div>
+    </div> -->
 
     <section class="sec1">
         <div class="main">
