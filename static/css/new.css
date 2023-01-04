@@ -10,9 +10,9 @@
 
 
 .main {
-  min-height: 100vh;
+  min-height: 110vh;
   position: relative;
-  width: 100%;
+  width: 110%;
   background: #000;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 }
 
 .main .image-container .image img {
-  width: 470px;
+  width: 377px;
   align-items: center;
 }
 
