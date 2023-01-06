@@ -14,47 +14,87 @@
     <title>
         Voice Assistant
     </title>
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Arvo&family=Bungee+Spice&family=DynaPuff:wght@400;700&family=IBM+Plex+Sans:wght@100&family=Source+Sans+Pro:wght@700&family=Titillium+Web:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
-        rel="stylesheet"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <!-- <script src="script.js"></script> -->
+
 </head>
 
 
 <body>
     <div class="nav-bar">
-    <nav class="navbar">
-        <div class="container-fluid"><a class="brand" href="{% url 'home' %}"><img class="brand-logo-light"
-              src="{% static './images/sitelogo.png' %}"  style="width:50px;height:50px;"
-              srcset="{% static './images/sitelogo.png' %}"></a>
-        </div>
-        <div class="voice-assistant">VOICE ASSISTANT</div>
-    </nav>
+        <nav class="navbar">
+            <div class="container-fluid"><a class="brand" href="{% url 'home' %}"><img class="brand-logo-light"
+                        src="{% static './images/logooo.png' %}" style="width:200px; height:90px;"
+                        srcset="{% static './images/logooo.png' %}"></a>
+            </div>
+            <!-- <div class="voice-assistant">VOICE ASSISTANT</div> -->
+        </nav>
     </div>
+    <div class="main-div">
+        <div class="main-div1">
+            <section class="sec1">
 
-    <!-- <div class="nav-bar">
-        <div class="image">
-            <a class="btn-image"> <img src="{% static './images/sitelogo.png' %}"></a>
-        </div>
-        <div class="voice">
-        <button class="btn">
-           <div class="voice" >   VOICE ASSISTANT  </div>
-           
-        </button>
-        </div>
-    </div> -->
+                <div class="style">
+                    <h1> Discover the Assistant Voice</h1>
+                </div>
+                <div class="can">
+                    <h2> Voice Assistant can do :</h2>
+                </div>
+                <div class="color">
+                    <h3>Work in multiple languages.</h3>
+                    <h3> Answer all questions.</h3>
+                    <h3>Show the search results in Google.</h3>
+                    <h3> Entertainment</h3>
+                    <h3> Information and knowledge.</h3>
+                </div>
 
-    <section class="sec1">
-        <div class="main">
-            <div class="main1">
-                <h1 class="head"> Choose language</h1>
-                <!-- <div class="col-md-12  col-12 lang_buttons"> -->
+                <div class="can">
+                    <h2> Use Assistance While :</h2>
+                </div>
+
+                <div class="play">
+                    <div class="image">
+                        <img src="https://www.pngkey.com/png/full/762-7622330_the-world-of-media-and-entertainment-entertainment-media.png"
+                            style="height:81px;width:197px" ;>
+                    </div>
+                    <div class="caption">
+                        <h3>Open Youtube.</h3>
+                        <h3>Play recommended videos on youtube.</h3>
+                        <h3>Play smooth Jazz on youtube.</h3>
+                        <h3> Play old songs on youtube.</h3>
+                    </div>
+                </div>
+
+                <div class="color1">
+                    <div class="search">
+                        <h3> Search cleopatra on wikipedia ?</h3>
+                        <h3> Search who is the president & London ?</h3>
+                        <h3> Search what time is it in Finland ?</h3>
+                    </div>
+                    <div class="image-search">
+                        <img src=" https://img.favpng.com/12/11/8/infographic-big-data-vector-graphics-image-information-png-favpng-yEBAKywsRJNuJwTZ3yY0vcCrJ.jpg"
+                            style="height:81px;width:197px" ;>
+                    </div>
+                </div>
+                <div class="last">
+                    <div class="last-image">
+                        <img src=" https://www.trukky.com/blog/wp-content/uploads/2017/12/mumbai-to-guwahati.png "
+                            style="height:81px;width:197px" ;>
+                    </div>
+                    <div class="last-caption">
+                        <h4> where is malaysia ?</h4>
+                        <h4> where are the restaurants near me?</h4>
+                    </div>
+                </div>
+        </div>
+        <div class="main-div2">
+            <div class="main">
+                <div class="main1">
+                    <h1 class="head"> Choose language</h1>
                     <div class="lang_buttons">
                         <div>
                             <a href="{% url 'telugu' %}"><button class="but">తెలుగు</button></a>
@@ -73,11 +113,11 @@
                             <a href="{% url 'tamil' %}"><button class="but"> தமிழ்</button></a>
                         </div>
                     </div>
-                <!-- </div> -->
+                </div>
             </div>
+            </section>
         </div>
-    </section>
-
+    </div>
 
 
 

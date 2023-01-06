@@ -3,11 +3,23 @@
 * {
   margin: 0px;
 
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Work Sans', sans-serif;
 }
+  .main-div{
+display: flex;
+background-image: linear-gradient(#000000e0, rgb(0 0 0 / 60%)), url('../images/1.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+  }
+
 .navbar {
   display: flex;
   align-items: center;
+  background-color: #fff;
+}
+element.style {
+  width: 200px;
+  height: 68px;
 }
 .btn{
   background-color:black;
@@ -33,22 +45,78 @@
   background-color: black;
   color: white;
 }
+.can-do{
+  display: flex;
+  flex-direction:column ;
+  padding-left: 50px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+  font-size: 18px;
+ }
+ .play{
+ 
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+  font-size: 15px;
+  padding-top: 15px;
+  display: flex;
+ }
+ .color{
+  font-family: "Lucida Console", "Courier New", monospace;
+  color:white;
+  padding-top: 22px;
+ }
+ .color1{
+  font-family: "Lucida Console", "Courier New", monospace;
+  color:white;
+  padding-top: 22px;
+  display: flex;
+ }
+ .search{
+  padding-right: 10px;
+ }
+ .caption{
+  padding-left: 10px;
+ }
+ .style{
+  font-family: cursive;
+  color: rgb(48, 221, 9);
+ }
+ .can{
+  font-variant: small-caps;
+  color:rgb(48, 221, 9);
+  padding-top: 20px;
+
+ }
+ .last{
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+  padding-top: 15px;
+  display: flex;
+ }
+ .last-caption{
+  padding-left: 10px;
+ }
+  .sec1{
+  padding-left: 150px;
+  padding-top: 60px;
+ }
+
 
 
 
 .main {
   margin: 0;
   position: relative;
-  background-image: linear-gradient(#000000e0, rgb(0 0 0 / 60%)), url('../images/1.jpg');
-  background-repeat: no-repeat;
   background-size: cover;
   width: 103%;
   height: 100vh;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 370px;
 
 }
 
@@ -74,7 +142,7 @@
 .main1 {
 
   text-align: center;
-  padding-top: 300px;
+  padding-top: 210px;
 }
 
 

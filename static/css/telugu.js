@@ -122,7 +122,7 @@ function speakThis(message) {
 
     else if (message.includes('యూట్యూబ్')) {
         console.log(message)
-        window.open('https://www.youtube.com//search?q= ' + message, "_blank");
+        window.open('https://www.youtube.com//search?q= ' + message.replace("యూట్యూబ్ లో ప్లే చేయండి", ""), "_blank");
         const finalText = "నేను కొంత సమాచారాన్ని కనుగొన్నాను" + message + "యూట్యూబ్‌లో";
         speech.text = finalText; 
 
@@ -145,29 +145,29 @@ function speakThis(message) {
         speech.text = finalText;
 
     }
-    else if (message.includes('who is')) {
+    else if (message.includes('ఎవరు')) {
         console.log(message)
-        window.open('https://en.wikipedia.org//wiki/' + message.replace("who is ", ""), "_blank");
-        const finalText = "I found some information for" + message + "on wikipedia";
+        window.open('https://en.wikipedia.org//wiki/' + message.replace("ఎవరు", ""), "_blank");
+        const finalText = "నేను మీరు అడిగిన సమాచారం వెతికాను" + message + "వికీపీడియా లో";
         speech.text = finalText;
 
     }
-    else if (message.includes('open maps')) {
+    else if (message.includes('మ్యాప్‌ తెరవండి')) {
         console.log(message)
         window.open('https://www.google.com/maps/@17.5931392,78.4728064,13z');
-        const finalText = "opening maps";
+        const finalText = "మ్యాప్‌ను తెరుస్తున్నాను";
         speech.text = finalText;
     }
-    else if (message.includes('meaning')) {
+    else if (message.includes('అర్థం ')) {
         console.log(message)
         window.open(' https://www.merriam-webster.com/dictionary/' + message.replace("meaning of", " "), "_blank");
         const finalText = "I found " + message + "in dictionary";
         speech.text = finalText;
     }
-    else if (message.includes('where is ')) {
+    else if (message.includes('ఎక్కడ')) {
         console.log(message)
-        window.open('https://www.google.com/maps/@17.5931392,78.4728064,13z/search?q=' + message.replace("where is", " "), "_blank");
-        const finalText = "I found some place for" + message + "in maps";
+        window.open('https://www.google.com/maps/@17.5931392,78.4728064,13z/search?q=' + message.replace("ఎక్కడ", " "), "_blank");
+        const finalText = "నేను మీరు అడిగిన సమాచారం వెతికాను" + message + "మప్స్ లో ";
 
         speech.text = finalText;
     }
@@ -198,7 +198,7 @@ function speakThis(message) {
     else {
         console.log(message)
         window.open('https://www.google.com/search?q= ' + message, "_blank");
-        const finalText = "I found some information for" + message + "on google";
+        const finalText = "నేను మీరు అడిగిన సమాచారం వెతికాను" + message + "గూగుల్‌లో";
         speech.text = finalText;
     }
     speech.volume = 1;
